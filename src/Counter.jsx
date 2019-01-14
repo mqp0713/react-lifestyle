@@ -29,7 +29,7 @@ class Counter extends Component {
 	// shouldComponentUpdate
 	shouldComponentUpdate(nextProps, nextState) {
 		console.log('counterShouldComponentUpdate',nextProps,nextState);
-		return this.props.count !== nextProps.count;
+		return this.props.count !== nextProps.count || this.state.counter !== nextState.counter;
 	}
 	// componentWillUpdate
 	componentWillUpdate(){
